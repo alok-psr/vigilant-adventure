@@ -1,23 +1,31 @@
 import { useState } from "react";
+import { signup, login } from "../../services/authService";
+import { auth, app } from "../../services/firebaseConfig";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const LoginSignup = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const submitFn = (e) => {
+  const submitFn = async (e) => {
     e.preventDefault();
-    const formData = {
-      username: isLogin ? null : username,
-      email,
-      password,
-    };
-    console.log(formData);
+    setError("");
 
-    setEmail("");
-    setPassword("");
-    setUsername("");
+    try {
+      if (isLogin) {
+        await login(email, password);
+        alert("Login successful!");
+      } else {
+        await signup(email, password);
+        alert("Signup successful! You can now log in.");
+      }
+      setEmail("");
+      setPassword("");
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   return (
