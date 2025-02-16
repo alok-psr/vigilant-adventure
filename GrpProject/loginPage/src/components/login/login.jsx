@@ -42,7 +42,7 @@ const LoginSignup = () => {
     >
       <div className="bg-[rgb(255,251,232)] px-20 flex-col py-10 justify-center rounded-2xl ring-inset ring-2 ring-green-400">
         <div>
-          <h1 className="text-4xl text-center pb-4">Grp Project Name/Title</h1>
+          <h1 className="text-4xl text-center pb-4">Memora</h1>
         </div>
         <div className=" p-12 rounded-lg shadow-2xl w-[400px] bg-sky-50 border-[rgb(26,43,62)] border-dashed border-[5px] ">
           <h2 className="text-3xl font-bold text-center mb-6">
