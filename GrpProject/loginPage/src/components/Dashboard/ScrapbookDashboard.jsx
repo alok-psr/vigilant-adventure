@@ -13,6 +13,8 @@ const ScrapbookDashboard = () => {
   //     { title: "Birthday Celebration", image: "https://via.placeholder.com/200", description: "A special day with family." }
   //   ];
 
+  // made by vansh arshia
+
   const sampleEntries = [
     {
       title: "Trip to the Mountains",
