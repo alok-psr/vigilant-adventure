@@ -8,6 +8,7 @@ const LoginSignup = () => {
   const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -19,7 +20,7 @@ const LoginSignup = () => {
       if (isLogin) {
         await login(email, password);
         alert("Login successful!");
-        navigate("../../Dashboard/ScrapBookDashboard.jsx"); // Redirect to ScrapBookDashboard
+        navigate("/Dashboard"); // Redirect to ScrapBookDashboard
       } else {
         await signup(email, password);
         alert("Signup successful! You can now log in.");

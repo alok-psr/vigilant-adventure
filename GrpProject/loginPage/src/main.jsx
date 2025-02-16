@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       { path: "/login", element: <LoginSignup /> },
-      { path: "/ScrapBookDashboard", element: <ScrapBookDashboard /> }, // Add this route
+      { path: "/Dashboard", element: <ScrapBookDashboard /> }, // Add this route
     ],
   },
 ]);
