@@ -3,7 +3,6 @@ import styles from "./home.module.css";
 import { Link } from "react-router";
  
 // made by nishtha 
-
 function Home() {
   return (
     <div className={styles.divbody}>
