@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import Home from "./components/home/home.jsx";
 import LoginSignup from "./components/login/login.jsx";
+import ScrapBookDashboard from "./components/Dashboard/ScrapBookDashboard.jsx";
 import App from "./App.jsx";
 import {
   createBrowserRouter,
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       { path: "/login", element: <LoginSignup /> },
+      { path: "/Dashboard", element: <ScrapBookDashboard /> }, // Add this route
     ],
   },
 ]);
